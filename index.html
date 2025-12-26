@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI Health Recommendation System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="title">
+        <i class="fa-solid fa-weight-scale"></i>
+        BMI Health Recommendation
+        <i class="fa-solid fa-heart-pulse"></i>
+    </h1>
+
+    <!-- INPUT CARD -->
+    <div class="glass-card input-card">
+        <input type="text" id="name" class="short-input" placeholder="👤 Name">
+        <input type="number" id="age" class="short-input" placeholder="🎂 Age">
+
+        <select id="gender" class="short-input">
+            <option value="">⚧ Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+
+        <input type="number" id="height" class="short-input" placeholder="📏 Height (cm)">
+        <input type="number" id="weight" class="short-input" placeholder="⚖ Weight (kg)">
+
+        <button class="btn" onclick="calculateBMI()">
+            <i class="fa-solid fa-calculator"></i> Calculate BMI
+        </button>
+    </div>
+
+    <!-- RESULT CARD -->
+    <div id="result" class="result-card hidden">
+
+        <h2>Welcome, <span id="userName"></span> 👋</h2>
+        <p class="info">Age: <span id="userAge"></span> | Gender: <span id="userGender"></span></p>
+
+        <div class="bmi-box">
+            <p>Your BMI</p>
+            <h3 id="bmiValue"></h3>
+            <span id="bmiStatus"></span>
+        </div>
+
+        <div class="progress">
+            <div id="progressBar"></div>
+        </div>
+
+        <!-- HEALTH TIPS -->
+        <div class="tips">
+            <h3><i class="fa-solid fa-apple-whole"></i> Health Tips</h3>
+            <ul id="tipsList"></ul>
+        </div>
+
+        <!-- MEAL PLAN -->
+        <div class="meal-plan">
+            <h3><i class="fa-solid fa-utensils"></i> Daily Meal Plan</h3>
+
+            <div class="meal-grid">
+                <div class="meal-card">🍳 <b>Breakfast</b><p id="breakfast"></p></div>
+                <div class="meal-card">🍛 <b>Lunch</b><p id="lunch"></p></div>
+                <div class="meal-card">🍎 <b>Snacks</b><p id="snacks"></p></div>
+                <div class="meal-card">🍽️ <b>Dinner</b><p id="dinner"></p></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
